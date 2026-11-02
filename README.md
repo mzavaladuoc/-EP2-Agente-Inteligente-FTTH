@@ -29,6 +29,7 @@ Desarrollar un prototipo de agente inteligente que permita analizar incidencias 
 | GitHub | Control de versiones y documentación |
 
 ## 4. Arquitectura del agente
+[Ver arquitectura y diagrama de orquestación](docs/ARQUITECTURA.md)
 
 El flujo principal implementado en LangGraph V8 es:
 
