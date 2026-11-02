@@ -1,0 +1,68 @@
+# Pruebas de integración — Agente Inteligente FTTH
+
+## 1. Objetivo
+
+Comprobar el funcionamiento integrado del prototipo desarrollado para la Evaluación Parcial 2, utilizando una incidencia FTTH simulada e incorporando recuperación de antecedentes, planificación de verificaciones, análisis contextual de mediciones OTDR y conservación del estado del ticket.
+
+## 2. Escenario de prueba
+
+- **Ticket:** SIM-005.
+- **Tipo de red:** FTTH.
+- **Descripción:** Clientes FTTH sin servicio. Se informa posible daño físico en caja CTO.
+- **Antecedentes recuperados mediante RAG:** 3.
+- **Verificaciones técnicas planificadas:** 6.
+- **Mediciones OTDR simuladas:** 2.
+
+Las mediciones utilizadas fueron:
+
+| Medición | Origen | Distancia |
+|---|---|---|
+| 1 | Mufa de distribución (simulada) | 850 m |
+| 2 | Nodo FTTH (simulado) | 1.250 m |
+
+## 3. Pruebas realizadas
+
+| Prueba | Resultado |
+|---|---|
+| Ejecución del flujo de trabajo con LangGraph | Superada |
+| Consulta de antecedentes mediante RAG | Superada |
+| Generación del plan de verificaciones | Superada |
+| Generación de orientación técnica mediante Gemini | Ejecutada |
+| Identificación de distintos orígenes OTDR | Superada |
+| Exportación de evidencia JSON | Superada |
+| Generación del gráfico OTDR | Superada |
+| Guardado del estado del ticket en Google Drive | Superada |
+| Recuperación del estado desde archivo JSON | Superada |
+| Restauración del estado en LangGraph | Superada |
+
+## 4. Validación técnica de mediciones OTDR
+
+El prototipo identificó que las mediciones fueron realizadas desde puntos de origen diferentes.
+
+En consecuencia, incorporó una advertencia para evitar interpretar directamente la diferencia entre 850 m y 1.250 m como una ubicación confirmada de falla.
+
+Para relacionar ambas mediciones sería necesario verificar el recorrido óptico, la fibra intervenida, los puntos de referencia y la correspondencia entre los eventos registrados.
+
+## 5. Memoria y recuperación
+
+El prototipo utiliza un mecanismo de conservación del estado durante la ejecución con LangGraph. Adicionalmente, se implementó un respaldo del estado del ticket en formato JSON dentro de Google Drive.
+
+Se comprobó la lectura del archivo y la restauración de sus datos en LangGraph, incluyendo antecedentes, planificación y mediciones históricas.
+
+Esta implementación permite recuperar información previamente guardada, aunque no constituye por sí sola una memoria autónoma de aprendizaje continuo.
+
+## 6. Limitaciones
+
+- El caso SIM-005 y sus mediciones OTDR son simulados.
+- La orientación generada por Gemini requiere validación humana.
+- La recuperación RAG identifica antecedentes similares, pero no demuestra que correspondan a la misma falla.
+- La validación de orígenes OTDR utiliza reglas programadas y no reemplaza el análisis de trazas reales.
+- La persistencia externa depende de guardar y recuperar los archivos JSON.
+
+## 7. Conclusión
+
+Las pruebas realizadas permitieron comprobar la integración de los principales componentes del prototipo: recuperación de antecedentes, planificación de verificaciones, generación de orientación técnica y conservación del estado de una incidencia.
+
+El resultado representa una herramienta de apoyo al diagnóstico FTTH. Su utilidad está en organizar información y proponer verificaciones, manteniendo la responsabilidad de las mediciones y decisiones técnicas en el personal especializado.
+
+**Evidencia gráfica:** `EP2_Grafico_OTDR_SIM005.png`.
