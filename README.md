@@ -71,3 +71,13 @@ Se desarrolló una prueba simulada correspondiente a clientes FTTH sin servicio,
 | Recuperación del estado | Superada |
 
 Las dist
+
+## Interfaz visual del Agente FTTH
+
+El prototipo incorpora una interfaz desarrollada con Gradio que permite ingresar incidencias FTTH y visualizar la orientación generada, los antecedentes recuperados, el plan de verificación y las advertencias asociadas a mediciones OTDR.
+
+- [Notebook principal con interfaz Gradio](notebooks/EP2_Agente_FTTH_Con_Interfaz_Visual.ipynb)
+- [Documentación de la interfaz](docs/INTERFAZ_GRADIO.md)
+- [Evidencia visual SIM-005](evidencias/EP2_Gradio_SIM005_Evidencia.png)
+
+La aplicación se ejecuta desde Google Colab. El modo real requiere credenciales de Gemini y una base FTTH anonimizada. El enlace temporal de Gradio solo permanece disponible mientras la sesión correspondiente esté activa.
