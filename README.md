@@ -70,7 +70,6 @@ Se desarrolló una prueba simulada correspondiente a clientes FTTH sin servicio,
 | Validación de orígenes | Diferentes |
 | Recuperación del estado | Superada |
 
-Las dist
 
 ## Interfaz visual del Agente FTTH
 
