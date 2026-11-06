@@ -2,9 +2,13 @@
 
 ## Notebook principal
 
-**EP2_Agente_FTTH_Entrega_GitHub.ipynb**
+**EP2_Agente_FTTH_Con_Interfaz_Visual.ipynb**
 
-Versión consolidada del prototipo desarrollado para la Evaluación Parcial 2. Incluye la arquitectura del agente, pruebas funcionales y evidencias de ejecución con LangGraph, Chroma y Gemini.
+Esta es la versión principal del Agente Inteligente FTTH para la Evaluación Parcial 2. Integra LangGraph para organizar el flujo de diagnóstico, Chroma para recuperar antecedentes, Gemini para generar orientación técnica y Gradio como interfaz visual.
+
+Permite ingresar una incidencia FTTH y visualizar la respuesta del agente, los antecedentes recuperados, el plan de verificación y las advertencias asociadas a las mediciones OTDR.
+
+Las versiones anteriores se conservan como respaldo del desarrollo y de las pruebas realizadas.
 
 ## Requisitos de ejecución
 
